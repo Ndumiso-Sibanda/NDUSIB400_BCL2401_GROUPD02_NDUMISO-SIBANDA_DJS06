@@ -48,3 +48,11 @@ console.log(nameLenths);
 console.log("\n4. Sorting:");
 const sortedProvinces = [...provinces].sort(); //Copied the array to avoid modifying the original
 console.log(sortedProvinces);
+
+//5. Filtering Cape
+console.log("\n5. Filtering Cape:");
+const filteredProvinces = provinces.filter(
+ (province) => !province.includes("Cape")
+);
+console.log(filteredProvinces);
+console.log("Remaining provinces count:", filteredProvinces.length);
