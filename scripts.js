@@ -43,3 +43,8 @@ console.log(uppercaseProvinces);
 console.log("\n3. Name Lengths:");
 const nameLenths = names.map((name) => name.length);
 console.log(nameLenths);
+
+//4. Sorting
+console.log("\n4. Sorting:");
+const sortedProvinces = [...provinces].sort(); //Copied the array to avoid modifying the original
+console.log(sortedProvinces);
