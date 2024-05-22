@@ -69,3 +69,9 @@ const nameProvinceMapping = names.reduce((acc, name, index) => {
  return acc;
 }, {});
 console.log(nameProvinceMapping);
+
+// Advanced Exercises
+
+// 1. Log Products
+console.log("\nAdvanced 1. Log Products:");
+console.log(products.map((product) => product.product));
