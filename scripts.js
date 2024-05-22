@@ -57,7 +57,7 @@ const filteredProvinces = provinces.filter(
 console.log(filteredProvinces);
 console.log("Remaining provinces count:", filteredProvinces.length);
 
-//6. Finding 'S'
+// 7. Creating Object Mapping
 console.log("\n7 Creating Object MApping:");
 const nameProvinceMapping = names.reduce((acc, name, index) => {
  acc[name] = provinces[index];
