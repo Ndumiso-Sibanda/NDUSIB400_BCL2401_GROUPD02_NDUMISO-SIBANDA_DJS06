@@ -103,3 +103,17 @@ const validPrices = products
 const highestPrice = Math.max(...validPrices);
 const lowestPrices = Math.min(...validPrices);
 console.log(`Highest: ${highestPrice}. Lowest: ${lowestPrice}.`);
+
+//6 Object Transformation
+console.log("\nAdvanced 6. Object Transformation:");
+const transformedProducts = products.reduce((acc, product) => {
+ if (String(product.price).trim() !== "") {
+  // Convert to string before trimming
+  acc[product.product] = {
+   name: product.product,
+   const: parseFloat(product.price),
+  };
+ }
+ return acc;
+}, {});
+console.log(transformedProducts);
