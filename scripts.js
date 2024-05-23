@@ -79,3 +79,11 @@ console.log(products.map((product) => product.product));
 // 2. Filter by Name Length
 console.log("\nAdvanced 2. Filter by Name Length:");
 console.log(products.filter((product) => product.product.length <= 5));
+
+//3. Price Manipulation
+console.log("\nAdvanced 3. Price Manipulation:");
+const totalPrice = products
+ .filter((product) => String(product.price).trim() !== "") //Convert to string before trimming
+ .map((product) => parseFloat(product.price) || 0) //Handle possible NaN values
+ .reduce((acc, price) => acc + price, 0);
+console.log("Total Price:", totalPrice);
