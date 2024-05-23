@@ -75,3 +75,7 @@ console.log(nameProvinceMapping);
 // 1. Log Products
 console.log("\nAdvanced 1. Log Products:");
 console.log(products.map((product) => product.product));
+
+// 2. Filter by Name Length
+console.log("\nAdvanced 2. Filter by Name Length:");
+console.log(products.filter((product) => product.product.length <= 5));
