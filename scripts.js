@@ -95,23 +95,23 @@ const concatenatedNames = products
  .trim();
 console.log(concatenatedNames);
 
-//5. Find Extremes inm Prices
+// 5. Find Extremes in Prices
 console.log("\nAdvanced 5. Find Extremes in Prices:");
 const validPrices = products
- .filter((product) => String(product.price).trim() !== "") //Convert to string before trimming
+ .filter((product) => String(product.price).trim() !== "") // Convert to string before trimming
  .map((product) => parseFloat(product.price));
 const highestPrice = Math.max(...validPrices);
-const lowestPrices = Math.min(...validPrices);
+const lowestPrice = Math.min(...validPrices);
 console.log(`Highest: ${highestPrice}. Lowest: ${lowestPrice}.`);
 
-//6 Object Transformation
+// 6. Object Transformation
 console.log("\nAdvanced 6. Object Transformation:");
 const transformedProducts = products.reduce((acc, product) => {
  if (String(product.price).trim() !== "") {
   // Convert to string before trimming
   acc[product.product] = {
    name: product.product,
-   const: parseFloat(product.price),
+   cost: parseFloat(product.price),
   };
  }
  return acc;
