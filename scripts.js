@@ -94,3 +94,12 @@ const concatenatedNames = products
  .reduce((acc, product) => acc + " " + product.product, "")
  .trim();
 console.log(concatenatedNames);
+
+//5. Find Extremes inm Prices
+console.log("\nAdvanced 5. Find Extremes in Prices:");
+const validPrices = products
+ .filter((product) => String(product.price).trim() !== "") //Convert to string before trimming
+ .map((product) => parseFloat(product.price));
+const highestPrice = Math.max(...validPrices);
+const lowestPrices = Math.min(...validPrices);
+console.log(`Highest: ${highestPrice}. Lowest: ${lowestPrice}.`);
