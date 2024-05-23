@@ -87,3 +87,10 @@ const totalPrice = products
  .map((product) => parseFloat(product.price) || 0) //Handle possible NaN values
  .reduce((acc, price) => acc + price, 0);
 console.log("Total Price:", totalPrice);
+
+//4. Concatenate Product Name
+console.log("\nAdvanced 4. Concatenate Product Names:");
+const concatenatedNames = products
+ .reduce((acc, product) => acc + " " + product.product, "")
+ .trim();
+console.log(concatenatedNames);
